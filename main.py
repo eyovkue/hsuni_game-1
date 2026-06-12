@@ -21,7 +21,7 @@ import sys
 import os
 import textwrap
 from player import Player
-from story import SCENE_MAP
+from story import SCENE_MAP, ENDINGS_S2
 
 # ──────────────────────────────────────────────
 # 설정
@@ -398,6 +398,16 @@ def main():
 
         if scene["id"] == "ending":
             state = "ending"
+        # ── 2학기 엔딩 분기 처리 ──────────────────────────────
+        elif scene.get("_ending_branch"):
+            for ending in ENDINGS_S2:
+                if ending["condition"](player):
+                    load_scene(ending["id"])
+                    return
+            load_scene("s2_end_okay")
+            return
+        elif scene["id"] in ("s2_end_star", "s2_end_inssa", "s2_end_money", "s2_end_okay"):
+            state = "dialog"  # 대사 출력 후 ending 상태로 전환은 advance_scene에서 처리
         elif scene.get("choices"):
             # 대사가 없으면 바로 선택지
             if not scene["lines"]:
@@ -419,6 +429,12 @@ def main():
         else:
             nxt = scene.get("next")
             if nxt is None:
+                # 2학기 엔딩 씬이면 ending 상태로 전환
+                s2_ending_ids = {"s2_end_star", "s2_end_inssa", "s2_end_money", "s2_end_okay"}
+                if scene["id"] in s2_ending_ids:
+                    nonlocal state
+                    state = "ending"
+                    return
                 scene_id = "ending"
             else:
                 scene_id = nxt
