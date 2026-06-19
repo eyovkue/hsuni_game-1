@@ -4,10 +4,10 @@
 수강신청부터 기말고사까지, 선택이 당신의 대학 생활을 결정합니다.
 
 
-HANSUNGFRESHMANSURVIVAL/
-|├── main.py|               ← 핵심 게임 엔진 및 실시간 UI 렌더러 (Pygame)
-|├── player.py|             ← 플레이어 스탯 및 학점 평점 관리 클래스
-|├── story.py|              ← 1·2학기 전체 시나리오 대사, 선택지, 엔딩 조건 딕셔너리 데이터
+## HANSUNGFRESHMANSURVIVAL/
+├── main.py               ← 핵심 게임 엔진 및 실시간 UI 렌더러 (Pygame)
+├── player.py             ← 플레이어 스탯 및 학점 평점 관리 클래스
+├── story.py              ← 1·2학기 전체 시나리오 대사, 선택지, 엔딩 조건 딕셔너리 데이터
 ├── prompt_history.md     ← AI 코랩 프롬프트 빌드 기록
 └── assets/
     ├── backgrounds/      ← 배경 에셋 (title_bg.jpg, 팀플.jpg, 한성대 배경2.jpg 등)
