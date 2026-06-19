@@ -18,16 +18,15 @@
 
 
 HANSUNGFRESHMANSURVIVAL/
-├── main.py               ← 핵심 게임 엔진 및 실시간 UI 렌더러 (Pygame)
-├── player.py             ← 플레이어 스탯 및 학점 평점 관리 클래스
-├── story.py              ← 1·2학기 전체 시나리오 대사, 선택지, 엔딩 조건 딕셔너리 데이터
-├── prompt_history.md     ← AI 코랩 프롬프트 빌드 기록
-└── assets/
-    ├── backgrounds/      ← 배경 에셋 (title_bg.jpg, 팀플.jpg, 한성대 배경2.jpg 등)
-    ├── characters/       ← 캐릭터 인물 스탠딩 스프라이트 (player_normal.png 등)
-    ├── sound/            ← 배경 음악 에셋 (main_bgm.mp3)
-    ├── semester 1/       ← 1학기에 대한 대본
-    └── semester 2(확정)/  ← 2학기에 대한 대본
+├─ main.py              ← 게임 엔진 (Pygame)
+├─ player.py            ← 플레이어 스탯 클래스
+├─ story.py             ← 전체 씬/대사/선택지 데이터
+├─ prompt_history.md    ← AI 프롬프트 기록
+├─ README.md            ← 이 파일
+└─ assets/
+   ├─ backgrounds/      ← 배경 이미지 (PNG/JPG)
+   ├─ characters/       ← 캐릭터 스프라이트 (PNG)
+   └─ audio/            ← BGM / 효과음 (OGG/WAV)
 
 ## ⚙️ 설치 및 실행
 
