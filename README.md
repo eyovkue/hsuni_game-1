@@ -18,12 +18,12 @@
 
 
 HANSUNGFRESHMANSURVIVAL/
-├─ main.py              ← 게임 엔진 (Pygame)
-├─ player.py            ← 플레이어 스탯 클래스
-├─ story.py             ← 전체 씬/대사/선택지 데이터
-├─ prompt_history.md    ← AI 프롬프트 기록
-├─ README.md            ← 이 파일
-└─ assets/
+ ├─ main.py              ← 게임 엔진 (Pygame)
+ ├─ player.py            ← 플레이어 스탯 클래스
+ ├─ story.py             ← 전체 씬/대사/선택지 데이터
+ ├─ prompt_history.md    ← AI 프롬프트 기록
+ ├─ README.md            ← 이 파일
+ └─ assets/
    ├─ backgrounds/      ← 배경 이미지 (PNG/JPG)
    ├─ characters/       ← 캐릭터 스프라이트 (PNG)
    └─ audio/            ← BGM / 효과음 (OGG/WAV)
